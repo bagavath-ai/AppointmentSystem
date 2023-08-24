@@ -17,5 +17,8 @@
 1.Java
 2.H2 database
 3.spring boot API
+4.jpa
+5.javascript 
+7.ajax
 
 
