@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<div th:replace="~{fragment/Header :: head}"></div>
+
+<body>
+	<div class="container mt-4">
+		
+		<h1 class="display-4">Appointment System</h1>
+		
+		<div class="jumbotron">
+			<button class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#ModalAdd">Add
+				Appointment</button>
+			            <div class="mb-4"></div>
+
+
+			<table class="table table-striped" id="dataTable">
+				<thead>
+					<tr>
+						<th scope="col">#</th>
+
+						<th scope="col">Patient Name</th>
+						<th scope="col">Doctor Name</th>
+						<th scope="col">Appointment Date</th>
+						<th scope="col">Appointment Time</th>
+						<th scope="col">Action</th>
+					</tr>
+				</thead>
+				<tbody>
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+	
+</body>
+
+<div th:replace="~{fragment/Footer :: footer}"></div>
+
+
+</html>

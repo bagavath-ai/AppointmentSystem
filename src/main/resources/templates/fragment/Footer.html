@@ -1,0 +1,111 @@
+<footer class="main-footer" th:fragment="footer">
+	<div class="modal fade" id="ModalAdd">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Add Appoinment</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label for="inputBox">Patient Name:</label>
+						<input type="text" class="form-control" id="patient" placeholder="Enter Patient Name">
+					</div>
+					<div class="form-group">
+						<label for="inputBox">Doctor Name:</label>
+						<input type="text" class="form-control" id="doctor" placeholder="Enter Doctor Name">
+					</div>
+					<div class="form-group">
+						<label for="datePicker">Date:</label>
+						<input type="text" class="form-control datepicker" id="datePicker">
+					</div>
+					<div class="form-group">
+						<label for="timePicker">Time:</label>
+						<input type="text" class="form-control timepicker" id="timePicker">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary" onclick="app.ui.postAppointment()">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="ModalEdit">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Edit Appoinment</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<input hidden type="text" class="form-control" id="id" placeholder="Enter Patient Name">
+
+					<div class="form-group">
+						<label for="inputBox">Patient Name:</label>
+						<input type="text" class="form-control" id="patientedit" placeholder="Enter Patient Name">
+					</div>
+					<div class="form-group">
+						<label for="inputBox">Doctor Name:</label>
+						<input type="text" class="form-control" id="doctoredit" placeholder="Enter Doctor Name">
+					</div>
+					<div class="form-group">
+						<label for="datePicker">Date:</label>
+						<input type="text" class="form-control datepickeredit" id="datePickeredit">
+					</div>
+					<div class="form-group">
+						<label for="timePicker">Time:</label>
+						<input type="text" class="form-control timepickeredit" id="timePickeredit">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary" onclick="app.ui.updateAppointment()">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Link Bootstrap Datepicker JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <!-- Link Bootstrap Timepicker JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  	 <script src="/js/app.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+  
+  <script>
+    // Initialize Datepicker and Timepicker
+    $(document).ready(function () {
+      $('.datepicker').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true
+      });
+
+        flatpickr("#timePicker", {
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "H:i",
+      time_24hr: true
+    });
+        $('.datepickeredit').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true
+      });
+
+        flatpickr("#timePickeredit", {
+      enableTime: true,
+      noCalendar: true,
+      dateFormat: "H:i",
+      time_24hr: true
+    });
+    });
+  </script>
+</footer>
