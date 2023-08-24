@@ -22,4 +22,6 @@
 7.ajax
 8.bootstrap
 
+Url:http://localhost:8080/
+
 
