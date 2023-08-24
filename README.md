@@ -9,7 +9,7 @@
 
 **Steps to follow:-**
 1. Install the Java 17 version on the PC.
-2. In the release tab we have built the jar for the latest code.
+2. In the git release tab we have built the jar from the latest code.
 3. Kindly download the AppointmentSystem-0.0.1-SNAPSHOT.jar
 4. Run the bundle with this command **java -jar AppointmentSystem-0.0.1-SNAPSHOT.jar**
 
