@@ -14,8 +14,8 @@
 4. Run the bundle with this command **java -jar AppointmentSystem-0.0.1-SNAPSHOT.jar**
 
 **Technology used:**
-*Java
-*H2 database
-*spring boot API
+1.Java
+2.H2 database
+3.spring boot API
 
 
