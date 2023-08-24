@@ -16,6 +16,13 @@ import com.sysvine.as.service.AppointmentDetailsService;
 
 import jakarta.transaction.Transactional;
 
+/**
+ * 
+ * @author Bagavath
+ * 
+ * Below class is use for add business logic 
+ *
+ */
 @Service("appointment")
 public class AppointmentDetailsimplementation implements AppointmentDetailsService {
 
